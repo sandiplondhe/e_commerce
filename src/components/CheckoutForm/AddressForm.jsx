@@ -8,11 +8,11 @@ import {commerce} from '../../lib/commerce'
 const AddressForm = ({checkoutToken,next}) => {
     const methods=useForm();
     const [shippingCountries, setShippingCountries] = useState([])
-    const [shippingCountry, setShippingCountry] = useState([])
+    const [shippingCountry, setShippingCountry] = useState('')
     const [shippingSubdivisions, setShippingSubdivisions] = useState([])
-    const [shippingSubdivision, setShippingSubdivision] = useState([])
+    const [shippingSubdivision, setShippingSubdivision] = useState('')
     const [shippingOptions, setShippingOptions] = useState([])
-    const [shippingOption, setShippingOption] = useState([])
+    const [shippingOption, setShippingOption] = useState('')
 
     const countries=Object.entries(shippingCountries).map(([code,name])=>({id:code,label:name}));
     const subdivisions=Object.entries(shippingSubdivisions).map(([code,name])=>({id:code,label:name}));
